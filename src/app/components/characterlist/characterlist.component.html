@@ -1,0 +1,8 @@
+<div *ngFor="let character of characters">
+    <mat-card>
+      <img [src]="character.image" width="100" />
+      <h3>{{ character.name }}</h3>
+      <p>House: {{ character.house }}</p>
+    </mat-card>
+  </div>
+  

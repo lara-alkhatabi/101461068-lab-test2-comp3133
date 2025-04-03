@@ -1,0 +1,17 @@
+<mat-card *ngIf="character">
+    <img [src]="character.image" width="150" />
+    <h2>{{ character.name }}</h2>
+    <p><strong>Species:</strong> {{ character.species }}</p>
+    <p><strong>House:</strong> {{ character.house || 'N/A' }}</p>
+    <p><strong>Wizard:</strong> {{ character.wizard ? 'Yes' : 'No' }}</p>
+    <p><strong>Ancestry:</strong> {{ character.ancestry || 'Unknown' }}</p>
+    <p><strong>Wand:</strong>
+      <span *ngIf="character.wand">
+        {{ character.wand.wood || 'Unknown' }} /
+        {{ character.wand.core || 'Unknown' }} /
+        {{ character.wand.length || 'Unknown length' }}
+      </span>
+    </p>
+    <p><strong>Actor:</strong> {{ character.actor }}</p>
+  </mat-card>
+  
